@@ -1,0 +1,88 @@
+#main-heading {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+
+body {
+    border: 0px;
+}
+
+/* Hide the number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Webkit (Safari/Chrome) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* margin-left: 50px;
+    padding: 50px; */
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(192, 192, 192, 0.5);
+    /* Translucent grey */
+    border-radius: 10px;
+    /* Curved edges */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.7);
+    /* Translucent grey */
+    border-radius: 10px;
+    /* Curved edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(64, 64, 64, 0.8);
+    /* Darker grey on hover */
+}
+
+.alarm-list {
+    margin-right: 20px;
+}
+
+.input-group-text {
+    border-radius: 0;
+    /* Set border radius to 0 to remove rounded corners */
+    border: 0;
+}
+
+.form-control {
+    border: 0;
+}
+
+
+.card-header {
+    border: 0;
+ 
+    
+}
+
+.input-group{
+    border-radius: 10px;
+}
+
+.heading {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.heading:hover {
+    transform: translateY(10px);
+    opacity: 0.5;
+
+}
