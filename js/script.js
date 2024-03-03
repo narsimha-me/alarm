@@ -22,7 +22,7 @@ function displayCurrentTime() {
     hours = hours.toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
-    const meridian = hours >= 12 ? 'PM' : 'AM';
+    const meridian = now.getHours() >= 12 ? 'PM' : 'AM';
     const currentTime = `${hours}:${minutes}:${seconds} ${meridian}`;
     document.getElementById('currentTime').textContent = currentTime;
     return currentTime;
