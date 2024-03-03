@@ -18,7 +18,8 @@ function validateInput(id, min, max) {
 // Function to display current time
 function displayCurrentTime() {
     const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
+    let hours = now.getHours() > 12 ? now.getHours() - 12 : now.getHours();
+    hours = hours.toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
     const meridian = hours >= 12 ? 'PM' : 'AM';
@@ -39,6 +40,8 @@ function setAlarm() {
     const meridian = document.getElementById('meridian').value;
     const alarmTime = `${hours}:${minutes}:${seconds} ${meridian}`;
     const alarm = { id: Date.now(), time: alarmTime, active: true };
+
+    //alert duplicate alarm or activate existing alarm
     for (let alarm of alarms) {
         if (alarm.time === alarmTime) {
 
@@ -109,7 +112,7 @@ function checkAlarms(currentTime) {
 }
 
 
-
+//Shift focus to hours, minutes, seconds and meridian
 
 function shiftFocus() {
 
